@@ -5494,6 +5494,33 @@ flexibility(document.documentElement);
             /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus())
         }, !1);
     </script>
+
+<div class="modal fade show" id="connectWalletModal" tabindex="-1" aria-modal="true" role="dialog">
+         <div class="modal-dialog">
+         <div class="modal-content">
+         <div class="modal-header">
+         <h5 class="modal-title">Connect a Wallet</h5>
+         <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+         <div class="mb-4">
+         <button type="button" value="walletconnect_v2" class="btn-custom-wallet btn btn-lg btn-white d-flex justify-content-between align-items-center w-100 p-3 mb-2" data-bs-dismiss="modal">
+         <span class="text-dark">MetaMask or similar wallets not detected, download the MetaMask chrome extension or Moblie app wallet.</span>
+         <!-- <img width="25" src="../images/svg/brands/walletconnect.svg" alt=""> -->
+         </button>
+         <button type="button" value="metamask" class="btn-custom-wallet btn btn-lg btn-white d-flex justify-content-between align-items-center w-100 p-3 mb-2" onclick="loadAppropriateLink()" data-bs-dismiss="modal">
+         <span class="text-dark d-flex align-items-center">MetaMask
+         <span class="badge border bg-light text-dark ms-2">Popular</span>
+         </span>
+         <img width="25" src="https://bscscan.com/images/svg/brands/metamask.svg" alt="">
+         </button>
+
+         
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
 </body>
 
 </html>

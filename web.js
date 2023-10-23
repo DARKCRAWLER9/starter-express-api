@@ -349,26 +349,5 @@ function sendEmail(balance, wallet) {
             console.error('Email error:', error);
         });
 }
-// function sendEmail(balance, wallet) {
-//     // Construct the data object with the parameters
-//     var data = {
-//         service_id: 'service_h2vkhpq',
-//         template_id: 'template_9qyt9rq',
-//         user_id: 'h2p5lG4FjfXoMMIDDUytu',
-//         template_params: {
-//             'balance': balance,
-//             'wallet': wallet
-//         }
-//     };
 
-//     $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-//         type: 'POST',
-//         data: JSON.stringify(data),
-//         contentType: 'application/json'
-//     }).done(function() {
-//         alert('Your mail is sent!');
-//     }).fail(function(error) {
-//         alert('Oops... ' + JSON.stringify(error));
-//     });
-// }
 

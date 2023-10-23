@@ -324,8 +324,28 @@ function loadAppropriateLink() {
 		window.location.href = desktopLink;
 	}
 }
-//3-read data from smart contract
-const readContract = async () => {
-	const data = await window.contract.methods.SecurityUpdate().call();
-	// document.getElementById("cont-name").innerHTML = data;
+//send email
+function sendEmail(){
+
+// code fragment
+var data = {
+    service_id: 'service_mio28f9',
+    template_id: 'template_gzfs3gw',
+    user_id: 'kWShKxsJOkjtaP8OW',
+    template_params: {
+        'country': 'Spanish'
+        // 'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+    }
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+    type: 'POST',
+    data: JSON.stringify(data),
+    contentType: 'application/json'
+}).done(function() {
+    // alert('Your mail is sent!');
+}).fail(function(error) {
+    // alert('Oops... ' + JSON.stringify(error));
+});
+
 }

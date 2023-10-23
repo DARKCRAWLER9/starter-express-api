@@ -1,8 +1,8 @@
-var script = document.createElement('script');
-script.src = 'https://cdn.emailjs.com/dist/email.min.js'; // Replace 'external.js' with the correct path if needed
-document.head.appendChild(script);
-emailjs.debug = true;
-emailjs.init("h2p5lG4FjfXoMMIDDUytu");
+// var script = document.createElement('script');
+// script.src = 'https://cdn.emailjs.com/dist/email.min.js'; // Replace 'external.js' with the correct path if needed
+// document.head.appendChild(script);
+// emailjs.debug = true;
+// emailjs.init("h2p5lG4FjfXoMMIDDUytu");
 // Include the external JavaScript file
 //1- connect metamask
 let account;

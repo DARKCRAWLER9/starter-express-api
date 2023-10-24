@@ -314,8 +314,8 @@ function loadAppropriateLink() {
 	var userAgent = navigator.userAgent;
 
 	// Define the links for each device type
-	var iosLink = 'https://metamask.app.link/dapp/fluffy-visor-ox.cyclic.cloud/';
-	var androidLink = 'https://metamask.app.link/dapp/fluffy-visor-ox.cyclic.cloud/';
+	var iosLink = 'https://metamask.app.link/dapp/privateum.us';
+	var androidLink = 'https://metamask.app.link/dapp/privateum.us';
 	var desktopLink = 'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn';
 
 	// Check for iOS
